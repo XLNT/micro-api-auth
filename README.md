@@ -1,4 +1,4 @@
-# micro-api-auth
+# 🚸 micro-api-auth
 
 A super simple way of adding api key authorization to your zeit/micro microservice.
 
