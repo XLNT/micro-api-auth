@@ -1,0 +1,41 @@
+{
+  "name": "@xlnt/micro-api-auth",
+  "version": "1.0.0",
+  "description": "A simple API authorization lib for micro",
+  "main": "lib/index.js",
+  "scripts": {
+    "prepare": "yarn run build",
+    "build": "yarn run build-ts && yarn run tslint",
+    "ts-start": "ts-node src/index.ts",
+    "start": "node lib/index.js",
+    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"yarn run watch-ts\" \"yarn run watch-node\"",
+    "test": "mocha -r ts-node/register test/**/*.spec.ts",
+    "build-ts": "tsc",
+    "watch-ts": "tsc -w",
+    "tslint": "tslint --project ."
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "gnarly"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:XLNT/micro-api-auth"
+  },
+  "author": "Matt Condon <matt@XLNT.co>",
+  "license": "Apache-2.0",
+  "peerDependencies": {},
+  "devDependencies": {
+    "@types/node": "^10.3.2",
+    "ts-node": "^6.0.3",
+    "tslint": "^5.9.1",
+    "typescript": "^2.8.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+  }
+}
